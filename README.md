@@ -1,27 +1,23 @@
 # FlexpagChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
+Este projeto foi desenvolvido com intuito avaliativo para o processo seletivo do cargo de Desenvolvedor Web Jr. da FlexPag.
 
-## Development server
+Aqui a proposta foi a de desenvolver uma aplicação de cotação de moedas, onde o usuário pode realizar a consulta do histórico de cotações da moeda BRL para a moeda selecionada.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Como usar a aplicação
+1. Clone o repositório
 
-## Code scaffolding
+- `git clone git@github.com:adyluna/FlexPag-FrontEd-Challenge.git`;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Entre na pasta do repositório que você acabou de clonar:
+  - `cd FlexPag-FrontEd-Challenge`
 
-## Build
+2. Instale as dependências
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- `npm install`
 
-## Running unit tests
+3. Inicie a aplicação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `ng serve`
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+A aplicação estará disponível na porta 4200 do seu localhost. Basta abrir seu navegador e pequisar por `http://localhost:4200/`
