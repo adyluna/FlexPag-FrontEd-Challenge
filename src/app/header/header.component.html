@@ -1,0 +1,49 @@
+<div class="appBody">
+  <h1 mat-dialog-title>{{ headerText }}</h1>
+
+  <div mat-dialog-content class="exchanges">
+      <label for="currency">
+        Moeda: 
+        <select name="currency" id="currency" (change)="changeCurrency($event)">
+          <option [value]="currency.ID" *ngFor="let currency of currencies">{{ currency.TEXT }}</option>
+        </select>
+      </label>
+
+      <label for="initialDate">
+        Data Inicial:
+        <input (change)="changeInitialDate($event)" type="date" [value]="initialDate" name="initialDate">
+      </label>
+      
+      <label for="finalDate">
+        Data Final: 
+        <input (change)="changeFinalDate($event)" type="date" [value]="finalDate">
+      </label>
+
+      <div class="buttons">
+        <button (click)="onClick()" class="gButton">Consultar dados</button>
+        <button (click)="onClick()" class="bButton">Atualizar dados</button>
+      </div>
+  </div>
+
+  <div class="exchangesTable">
+    <div *ngIf="data" class="exchangeColumn">
+      <h3>Cotação de compra</h3>
+      <input type="text" class="filterInput">
+      <p *ngFor="let i of data.value">{{ i.cotacaoCompra }}</p>
+    </div>
+
+    <div *ngIf="data" class="exchangeColumn">
+      <h3>Cotação de venda</h3>
+      <input type="text" class="filterInput">
+      <p *ngFor="let i of data.value">{{ i.cotacaoVenda }}</p>
+    </div>
+
+    <div *ngIf="data" class="exchangeColumn">
+      <h3>Data e hora da cotação</h3>
+      <input type="text" class="filterInput">
+      <p *ngFor="let i of data.value">{{ i.dataHoraCotacao }}</p>
+    </div>
+
+    <p *ngIf="!data">Faça uma consulta!</p>
+  </div>
+</div>
